@@ -88,63 +88,67 @@
 //user control and Movement Function
 	//task movement() {
 	//Shooting Variables
-		int i = 0;
+		int i = 50
 
 	task usercontrol() {
 		while(true) {
 
 		//Move Left Wheel
-			if((vexRT[Ch2] > 15) || (vexRT[Ch2] < -15)){
-				motor[leftMotor] = vexRT[Ch2];
+			if((vexRT[Ch3] > 15) || (vexRT[Ch3] < -15)){
+				motor[leftMotor] = vexRT[Ch3];
 			}
 			else {
 				motor[leftMotor] = 0;
 			}
 
 		//Move Right Wheel
-			if((vexRT[Ch3] > 15) || (vexRT[Ch3] < -15)){
-				motor[rightMotor] = vexRT[Ch3];
+			if((vexRT[Ch2] > 15) || (vexRT[Ch2] < -15)){
+				motor[rightMotor] = vexRT[Ch2];
 			}
 			else {
 				motor[rightMotor] = 0;
 			}
 //Shooting
 		//Flywheel Code
-			/*
+
 			if (vexRT[Btn6U] == 1) {
-				motor[flyWheel] = 64;
+				motor[flyWheel] = i;
 				if (i < 127) {
 					i++;
+					wait1Msec(80);
 				}
 			}
-			if (vexRT[Btn6U] == 0) {
-				motor[flyWheel] = 0;
-				i = 0;
-			}
+			//if (vexRT[Btn6U] == 0) {
+			//	motor[flyWheel] = 0;
+			//	i = 0;
+			//}
 			if (vexRT[Btn6D] == 1) {
-				motor[flyWheel] = ;
+				motor[flyWheel] = i;
 				if (i < 64) {
 					i++;
+					wait1Msec(80);
 				}
 			}
 			if (vexRT[Btn6D] == 0 && vexRT[Btn6U] == 0) {
 				motor[flyWheel] = 0;
-				i = 0;
+				i = 50
 			}
-			*/
+
 //Try a different Controller
+		/*
 			if (vexRT[Btn6U] == 1) {
 				motor[flyWheel] = 64;
 			}
-			/*if (vexRT[Btn5U] == 0) {
-				motor[loader] = 0;
-			}*/
+			//if (vexRT[Btn5U] == 0) {
+			//	motor[loader] = 0;
+			//}
 			if (vexRT[Btn6D] == 1){
 				motor[flyWheel] = -64;
 			}
 			if (vexRT[Btn6D] == 0 && vexRT[Btn6U] == 0) {
 				motor[flyWheel] = 0;
 			}
+		*/
 	//Loader Code
 			if (vexRT[Btn5U] == 1) {
 				motor[loader] = 64;
